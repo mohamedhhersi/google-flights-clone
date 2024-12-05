@@ -1,12 +1,30 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import CssBaseline from "@mui/material/CssBaseline";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 import "./index.css";
 import App from "./App";
+
+// Create theme that matches Google's design
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#1a73e8", // Google blue
+    },
+  },
+  typography: {
+    fontFamily: "Roboto, Arial, sans-serif",
+  },
+});
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <App />
+    </ThemeProvider>
   </React.StrictMode>
 );
 

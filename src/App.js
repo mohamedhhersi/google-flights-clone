@@ -1,17 +1,11 @@
+import React from "react";
+import { Container } from "@mui/material";
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container maxWidth="lg">
+      <h1>Google Flights Clone</h1>
+    </Container>
   );
 }
 
